@@ -1,0 +1,6 @@
+*.class
+*.prefs
+# Eclipse
+.classpath
+.project
+.settings/
