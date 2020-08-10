@@ -8,7 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
 import com.test.Browser;
 
 @RunWith(Suite.class)
-@SuiteClasses({ AddRemoveTest.class, SampleTest.class, BrokenImagesTest.class })
+@SuiteClasses({ AddRemoveTest.class, SampleTest.class, BrokenImagesTest.class, DropdownTest.class })
 public class AllTests {
 
 	@AfterClass

@@ -24,4 +24,9 @@ public class Pages {
 		return new BrokenImagesPage();
 	}
 
+	public static DropDownPage DropDownPage() {
+		// TODO Auto-generated method stub
+		return new DropDownPage();
+	}
+
 }
