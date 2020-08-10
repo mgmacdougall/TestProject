@@ -1,1 +1,7 @@
-/target/
+*.class
+*.prefs
+# Eclipse
+.classpath
+.project
+.settings/
+target/
