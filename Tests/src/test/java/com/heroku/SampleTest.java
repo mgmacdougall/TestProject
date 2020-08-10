@@ -1,10 +1,8 @@
 package com.heroku;
 
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.test.Browser;
 import com.test.Pages;
 
 import junit.framework.Assert;
@@ -34,7 +32,7 @@ public class SampleTest {
 	public void canGoToABTestPage() {
 		Pages.ABPage().goTo();
 		Pages.ABPage().isAt();
-		Assert.assertEquals("A/B Test Control", Pages.ABPage().getPageTitle());
+		Assert.assertTrue(Pages.ABPage().getPageTitle("A/B Test Variation 1"));
 	}
 	
 	@Test

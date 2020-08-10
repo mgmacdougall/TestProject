@@ -3,6 +3,8 @@ package com.test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /**
@@ -12,21 +14,26 @@ import org.openqa.selenium.By;
  */
 public class ABPage extends Browser{
 
+			
+			
 	static String url = "https://the-internet.herokuapp.com/abtest";
 	static String title = "The Internet";
 	
 	public void goTo() {
 		Browser.goTo(url);
-		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
 	}
 
 	public boolean isAt() {
 		return Browser.title().equals(title);
 	}
 
-	public String getPageTitle() {
+	public Boolean getPageTitle(String pageTitle) {
 		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
-		return driver.findElement(By.tagName("h3")).getText();	
+		WebDriverWait waitr = new WebDriverWait(driver, 40);
+//		waitr.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".example>h3")));
+		return waitr.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".example>h3"), pageTitle));
+//		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
+//		return driver.findElement(By.tagName("h3")).getText();	
 	}
 	
 	
