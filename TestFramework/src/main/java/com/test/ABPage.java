@@ -30,10 +30,7 @@ public class ABPage extends Browser{
 	public Boolean getPageTitle(String pageTitle) {
 		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
 		WebDriverWait waitr = new WebDriverWait(driver, 40);
-//		waitr.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".example>h3")));
 		return waitr.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".example>h3"), pageTitle));
-//		driver.manage().timeouts().implicitlyWait(10,  TimeUnit.SECONDS);
-//		return driver.findElement(By.tagName("h3")).getText();	
 	}
 	
 	

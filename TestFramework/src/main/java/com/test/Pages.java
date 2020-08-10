@@ -19,4 +19,9 @@ public class Pages {
 		return new AddRemovePage();
 	}
 
+	public static BrokenImagesPage BrokenImagesPage() {
+		// TODO Auto-generated method stub
+		return new BrokenImagesPage();
+	}
+
 }
