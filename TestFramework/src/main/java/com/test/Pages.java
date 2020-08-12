@@ -20,12 +20,10 @@ public class Pages {
 	}
 
 	public static BrokenImagesPage BrokenImagesPage() {
-		// TODO Auto-generated method stub
 		return new BrokenImagesPage();
 	}
 
 	public static DropDownPage DropDownPage() {
-		// TODO Auto-generated method stub
 		return new DropDownPage();
 	}
 
