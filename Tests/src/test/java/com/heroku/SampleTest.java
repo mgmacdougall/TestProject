@@ -32,7 +32,7 @@ public class SampleTest {
 	public void canGoToABTestPage() {
 		Pages.ABPage().goTo();
 		Pages.ABPage().isAt();
-		Assert.assertTrue(Pages.ABPage().getPageTitle("A/B Test Control"));
+		Assert.assertTrue(Pages.ABPage().getPageTitle("A/B Test Variation 1"));
 	}
 	
 	@Test
